@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>#1 Register From | Validation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,600,0,0">
+</head>
+
+<body>
+    <div class="container">
+        <div class="login-card">
+            <div class="login-card-header">
+                <h2>Register</h2>
+            </div>
+            <form action="#" method="post" class="login-card-form">
+                <!-- Email Input -->
+                <div class="form-item">
+                    <input type="email" id="email" name="email" required placeholder="example@gmail.com"
+                        oninput="validateEmail()" />
+                    <span class="form-item-icon material-symbols-rounded">mail</span>
+                </div>
+                <!-- Password Inputs -->
+                <div class="form-item">
+                    <input type="password" id="pass1" placeholder="Password" onkeyup="return validate()" />
+                    <span class="form-item-icon material-symbols-rounded">lock</span>
+                </div>
+                <div class="form-item">
+                    <input type="password" name="" id="pass2" placeholder="Confirm" oninput="confirmPass()" />
+                    <span class="form-item-icon material-symbols-rounded">lock</span>
+                </div>
+
+                <!-- Validation Errors -->
+                <div class="errors">
+                    <ul>
+                        <li id="length">At least 6 characters</li>
+                        <li id="number">At least 1 number (0-9)</li>
+                        <li id="lower">At least 1 lowercase (a-z)</li>
+                        <li id="upper">At least 1 uppercase (A-Z)</li>
+                        <li id="special_char">At least 1 special symbol (!-$)</li>
+                        <li id="password-match">Password confirmation is the same</li>
+                    </ul>
+                </div>
+                <!-- Register Button -->
+                <input class="register-btn" type="submit" value="register" id="register" disabled />
+            </form>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

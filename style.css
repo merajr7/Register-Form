@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background: linear-gradient(230deg, rgba(45, 149, 190, 0.9) 0%, rgba(56, 129, 205, 0.95) 50%, rgba(9, 65, 125, .9) 100%);
+    background-size: cover;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-card {
+    width: 80%;
+    max-width: 400px;
+    background: #191d23;
+    padding: 1.5rem 2rem;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0px 0px 5px 3px #06051496;
+}
+
+.login-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(25, 29, 35, .5);
+    transform: rotate(-10deg);
+    border-radius: 10px;
+    z-index: -1;
+    box-shadow: 0px 0px 8px 4px #060514d4;
+}
+
+.login-card-header {
+    text-align: center;
+    color: #fff;
+    margin: 15px 0;
+}
+
+.login-card-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.form-item {
+    position: relative;
+}
+
+.form-item .form-item-icon {
+    position: absolute;
+    top: 50%;
+    right: 1.4rem;
+    font-size: 1.3rem;
+    opacity: .4;
+    transform: translateY(-50%);
+    color: #fff;
+}
+
+.login-card input[type="password"],
+.login-card input[type="email"] {
+    border: none;
+    outline: none;
+    color: #ffe6e6;
+    background: #232931;
+    padding: 1rem 1.5rem;
+    padding-right: calc(1rem * 3.5);
+    border-radius: 100px;
+    width: 100%;
+}
+
+.errors {
+    border: 2px solid #7071727a;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-top: 10px;
+}
+
+.errors ul li {
+    list-style: none;
+    color: #ffffffca;
+    margin-bottom: 10px;
+}
+
+#password-match {
+    color: #e32c2ce0;
+    display: none;
+}
+
+.register-btn,
+.register-success {
+    cursor: not-allowed;
+    outline: none;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.7);
+    font-weight: 600;
+}
+
+.register-success {
+    background-color: #2aa72ad9;
+    cursor: pointer;
+}
+
+@media (max-width: 450px) {
+    .login-card::before {
+        opacity: 0;
+    }
+}
